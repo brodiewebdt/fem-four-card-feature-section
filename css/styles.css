@@ -28,8 +28,9 @@
 
   /* Neutral Colors */
   --color-dark: hsl(234, 12%, 34%);
-  --color-medium: hsl(229, 6%, 66%);
+  --color-medium: hsl(229, 6%, 46%);
   --color-light: hsl(0, 0%, 98%);
+  --color-white: hsl(0, 0%, 100%);
 
   /* Font Family */
   --ff-primary: 'Poppins', sans-serif;
@@ -53,6 +54,9 @@
   --fw-400: 400;
   --fw-300: 300;
   --fw-200: 200;
+
+  /* Spacing */
+  --spacing: 1rem;
 }
 
 *,
@@ -62,6 +66,7 @@
 }
 
 body {
+  background-color: var(--color-light);
   color: var(--color-medium);
   font-family: var(--ff-primary);
   font-size: var(--fs-15);
@@ -83,9 +88,117 @@ body {
   white-space: nowrap !important;
 }
 
+.wrapper {
+  margin: 0 auto;
+  max-width: 69.375rem;
+  margin-inline: auto;
+
+  outline: 1px solid magenta;
+  width: 90%;
+}
+
+.wrapper__narrow {
+  margin: 0 auto;
+  max-width: 33.75rem;
+
+  outline: 1px solid greenyellow;
+}
+
+.card-grid {
+  display: grid;
+  gap: calc(var(--spacing) * 1.5);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 330px));
+  justify-content: center;
+
+  max-width: 69.375rem;
+  outline: 2px solid red;
+}
+
+@media (min-width: 1050px) {
+  .card-grid {
+    gap: calc(var(--spacing) * 2);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      '... two ....'
+      'one two four'
+      'one three four'
+      '... three ....';
+  }
+
+  .card:nth-child(1) {
+    grid-area: one;
+  }
+
+  .card:nth-child(2) {
+    grid-area: two;
+  }
+
+  .card:nth-child(3) {
+    grid-area: three;
+  }
+
+  .card:nth-child(4) {
+    grid-area: four;
+  }
+}
+
+/********* Typography *********/
+h1,
+h2 {
+  color: var(--color-dark);
+  font-weight: var(--fw-600);
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 1.117rem + 1.633vi, 2.25rem);
+  font-weight: var(--fw-600);
+}
+
+h1 > span {
+  font-weight: var(--fw-200);
+}
+
+h2 {
+  font-size: var(--fs-20);
+}
+
+/********* Header Styles *********/
+header {
+  margin-block: 5rem;
+  text-align: center;
+}
+
+/********* Card Styles *********/
+.card {
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  box-shadow: 0px 15px 30px -11px hsla(213, 47%, 67%, 0.5);
+  padding: calc(var(--spacing) * 2);
+}
+
+.card__image {
+  margin-left: auto;
+  margin-block-start: 2rem;
+}
+
+.card--cyan {
+  border-top: 3.55px solid var(--color-cyan);
+}
+.card--red {
+  border-top: 3.55px solid var(--color-red);
+}
+.card--orange {
+  border-top: 3.55px solid var(--color-orange);
+}
+.card--blue {
+  border-top: 3.55px solid var(--color-blue);
+}
+
 /********* Attribution Styles *********/
 .attribution {
   font-size: 11px;
+  margin-block-start: 2rem;
   text-align: center;
 }
 .attribution a {
