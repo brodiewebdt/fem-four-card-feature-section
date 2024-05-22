@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 200;
+  src: url('../assets/fonts/Poppins/Poppins-ExtraLight.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: url('../assets/fonts/Poppins/Poppins-Regular.ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: url('../assets/fonts/Poppins/Poppins-SemiBold.ttf');
+  font-display: swap;
+}
+
+:root {
+  /* Primary Colors */
+  --color-red: hsl(0, 78%, 62%);
+  --color-cyan: hsl(180, 62%, 55%);
+  --color-orange: hsl(34, 97%, 64%);
+  --color-blue: hsl(212, 86%, 64%);
+
+  /* Neutral Colors */
+  --color-dark: hsl(234, 12%, 34%);
+  --color-medium: hsl(229, 6%, 66%);
+  --color-light: hsl(0, 0%, 98%);
+
+  /* Font Family */
+  --ff-primary: 'Poppins', sans-serif;
+
+  /* Font Size */
+  --fs-48: 3rem;
+  --fs-36: 2.25rem;
+  --fs-32: 2rem;
+  --fs-24: 1.5rem;
+  --fs-20: 1.25rem;
+  --fs-16: 1rem;
+  --fs-15: 0.9375rem;
+  --fs-14: 0.875rem;
+  --fs-12: 0.75rem;
+  /* Font Weights */
+  --fw-900: 900;
+  --fw-800: 800;
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-500: 500;
+  --fw-400: 400;
+  --fw-300: 300;
+  --fw-200: 200;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-medium);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-15);
+  font-weight: var(--fw-400);
+  line-height: 1.67;
+}
+
+.visually-hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+/********* Attribution Styles *********/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
