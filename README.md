@@ -25,8 +25,8 @@ This is a solution to the [Four card feature section on Frontend Mentor](https:/
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/css-grid-css-variables-izD-hrusGu]
+- Live Site URL: [https://clinquant-marigold-871da4.netlify.app/]
 
 ## My process
 
@@ -45,7 +45,7 @@ I used @font-face to import the fonts. I also used clamp and calc functions for 
 
 ### Continued development
 
-I have started using @font-face to import fonts. I will continue to use this method in future projects. Importing Googler fonts violates Europe's GDPR.
+I have started using @font-face to import fonts. I will continue to use this method in future projects. Importing Google fonts violates Europe's GDPR.
 
 ### Useful resources
 

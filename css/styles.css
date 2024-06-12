@@ -214,6 +214,7 @@ h2 {
 h1 {
   font-size: clamp(1.5rem, 1.117rem + 1.633vi, 2.25rem);
   font-weight: var(--fw-600);
+  margin-block-end: var(--spacing);
 }
 
 h1 > span {
